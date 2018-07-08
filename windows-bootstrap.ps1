@@ -19,12 +19,12 @@ function checkAndInstall([PackageManager]$type) {
 function install([PackageManager]$type) {
     switch ([PackageManager]$type) {
         "scoop" {
-            $p = Start-Process powershell.exe "-NoProfile -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File `"$(Get-Location)\scoop.ps1`"" -Verb RunAs -PassThru
+            $p = Start-Process powershell.exe "-NoProfile -WindowStyle Hidden -ExecutionPolicy RemoteSigned -File `"$(Get-Location)\package\scoop.ps1`"" -Verb RunAs -PassThru
             $p.WaitForExit()
             return $p.ExitCode
         }
         "chocolatey" {
-            $p = Start-Process powershell.exe "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$(Get-Location)\chocolatey.ps1`"" -Verb RunAs -PassThru
+            $p = Start-Process powershell.exe "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$(Get-Location)\package\chocolatey.ps1`"" -Verb RunAs -PassThru
             $p.WaitForExit()
             return $p.ExitCode
         }
@@ -60,6 +60,7 @@ scoop install less
 scoop install yarn
 scoop install handbrake-cli
 scoop install rclone
+scoop install python
 
 Write-Host "Done!" -ForegroundColor Green
 
