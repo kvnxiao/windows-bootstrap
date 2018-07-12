@@ -73,6 +73,7 @@ scoop install unrar
 scoop install unzip
 
 # Install scoop-extra tools
+scoop install conemu
 scoop install vscode
 scoop install android-sdk
 scoop install keepassxc
