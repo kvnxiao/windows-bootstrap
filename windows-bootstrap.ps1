@@ -61,6 +61,7 @@ scoop install yarn
 scoop install handbrake-cli
 scoop install rclone
 scoop install python
+scoop install jetbrains-toolbox
 
 Write-Host "Done!" -ForegroundColor Green
 
