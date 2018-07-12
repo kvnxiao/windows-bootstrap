@@ -39,6 +39,9 @@ Write-Host "Checking installs for scoop and chocolatey..."
 checkAndInstall([PackageManager]::scoop)
 checkAndInstall([PackageManager]::chocolatey)
 
+Write-Host "Adding scoop-extra bucket"
+scoop bucket add extras
+
 # Install scoop tools
 Write-Host "Installing scoop tools:"
 scoop install concfg
@@ -62,6 +65,31 @@ scoop install handbrake-cli
 scoop install rclone
 scoop install python
 scoop install jetbrains-toolbox
+scoop install 7zip
+scoop install tar
+scoop install bzip2
+scoop install gzip
+scoop install unrar
+scoop install unzip
+
+# Install scoop-extra tools
+scoop install vscode
+scoop install android-sdk
+scoop install keepassxc
+scoop install keypirinha
+scoop install qbittorent
+scoop install coretemp
+scoop install rainmeter
+scoop install inkscape
+scoop install handbrake
+scoop install obs-studio
+scoop install meld
+scoop install etcher
+scoop install taiga
+scoop install youtube-dl-gui
+scoop install calibre
+scoop install sharex
+scoop install audacity
 
 Write-Host "Done!" -ForegroundColor Green
 
