@@ -45,6 +45,8 @@ scoop bucket add extras
 # Install scoop tools
 Write-Host "Installing scoop tools:"
 scoop install concfg
+scoop install openssh
+scoop install git
 scoop install fd
 scoop install ripgrep
 scoop install curl
