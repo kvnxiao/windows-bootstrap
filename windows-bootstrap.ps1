@@ -73,6 +73,7 @@ scoop install bzip2
 scoop install gzip
 scoop install unrar
 scoop install unzip
+scoop install oxipng
 
 # Install scoop-extra tools
 scoop install conemu
